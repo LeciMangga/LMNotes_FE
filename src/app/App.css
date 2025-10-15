@@ -1,0 +1,73 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #1c1c1c; /* dark monochrome */
+  color: #e0e0e0;
+  font-family: 'Arial', sans-serif;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.App-logo {
+  height: 120px;
+  width: 120px;
+  animation: spin 20s linear infinite;
+  margin-bottom: 1rem;
+  filter: grayscale(100%); /* logo monokrom */
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #cccccc;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn.follow {
+  border: 2px solid #e0e0e0;
+  color: #e0e0e0;
+}
+
+.btn.follow:hover {
+  background-color: #e0e0e0;
+  color: #1c1c1c;
+}
+
+.App-footer {
+  margin-top: auto;
+  padding: 1rem;
+  opacity: 0.6;
+}
