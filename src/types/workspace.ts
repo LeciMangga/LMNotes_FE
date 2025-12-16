@@ -4,7 +4,8 @@ export interface Workspace_list {
 }
 
 export interface Workspace {
-    id: number;
+    workspace_id: string;
     name: string;
+    description: string;
     pages: Page[];
 }

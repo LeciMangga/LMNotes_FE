@@ -6,7 +6,7 @@ export default function Home() {
   const socialLinks = [
     { name: "@blublublublub2.0", url: "https://www.instagram.com/blublublublub2.0/" },
     { name: "@kissfor.u", url: "https://www.instagram.com/kissfor.u/" },
-    { name: "@returnn.p", url: "https://www.instagram.com/returnn.p/" }
+    { name: "@aldirafika_", url: "https://www.instagram.com/aldirafika_/" }
   ];
   return (
     <div className="App">

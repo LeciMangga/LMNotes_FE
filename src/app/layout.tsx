@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header/header";
-import Sidebar from "@/components/sidebar/sidebar";
+import SidebarArea from "@/components/sidebar/sidebarArea";
+import SessionWrapper from "@/components/SessionWrapper";
+import NextTopLoader from 'nextjs-toploader';
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,6 +27,7 @@ export const metadata: Metadata = {
   description: "A minimalist note-taking app for focused writing.",
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -34,18 +38,18 @@ export default function RootLayout({
       <body
         className={`${InterFont.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="w-full h-25 flex items-center flex-shrink-0 fixed top-0">
-          <Header />
-        </div>
-        <div className="flex flex-1">
-          <div className="fixed top-[100px] bottom-0 bg-[#1e1e1e] flex-shrink-0 w-16 md:w-64">
-            <Sidebar />
-          </div>
-
-          <main className="flex-1 overflow-y-auto ml-16 md:ml-64 lg:ml-64 pt-[100px]">
-            {children}
-          </main>
-        </div>
+          <NextTopLoader />
+          <SessionWrapper>
+            <div className="w-full h-25 flex items-center flex-shrink-0 fixed top-0">
+              <Header />
+            </div>
+            <div className="flex flex-1">
+              <SidebarArea />
+              <main className="flex-1 overflow-y-auto ml-16 md:ml-64 lg:ml-64 pt-[100px]">
+                {children}
+              </main>
+            </div>
+          </SessionWrapper>
       </body>
     </html>
   );

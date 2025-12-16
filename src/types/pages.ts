@@ -1,4 +1,5 @@
 export interface Page {
-    id: number;
-    name: string;
+    page_id: string;
+    title: string;
+    created_at: string;
 }
