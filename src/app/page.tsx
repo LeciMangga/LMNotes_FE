@@ -10,27 +10,24 @@ export default function Home() {
   ];
   return (
     <div className="App">
-          <header className="App-header">
-            <Image src={logo} className="App-logo" alt="LMNotes Logo" />
-            <h1>LMNotes Coming Soon!</h1>
-            <p>Our new web app is under construction. Stay tuned!</p>
-            <div className="cta-buttons">
-              {socialLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn follow"
-                >
-                  Follow {link.name}
-                </a>
-              ))}
-            </div>
-          </header>
-          <footer className="App-footer">
-            &copy; {new Date().getFullYear()} LMNotes
-          </footer>
+      <div className="App-header flex flex-col">
+        <Image src={logo} className="App-logo" alt="LMNotes Logo" />
+        <h1>LMNotes Coming So on!</h1>
+        <p>Our new web app is under construction. Stay tuned!</p>
+        <div className="cta-buttons">
+          {socialLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn follow"
+            >
+              Follow {link.name}
+            </a>
+          ))}
         </div>
+      </div>
+    </div>
   );
 }
