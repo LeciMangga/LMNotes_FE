@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import { ChevronDown, Folder } from "lucide-react";
-import CreatePage from "../../page/create/createPage";
-import ListPage from "../../page/list/listPage";
+import CreatePage from "@/components/sidebar/page/create/createPage";
+import ListPage from "@/components/sidebar/page/list/listPage";
 import { Workspace_list, Workspace } from "@/types";
 
 

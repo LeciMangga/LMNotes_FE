@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
-import CreateWorkspace from "./workspace/create/createWorkspace";
-import ListWorkspace from "./workspace/list/listWorkspace";
+import CreateWorkspace from "@/components/sidebar/workspace/create/createWorkspace";
+import ListWorkspace from "@/components/sidebar/workspace/list/listWorkspace";
 import { Workspace_list } from "@/types";
-import Login from "./Auth/login";
-import Register from "./Auth/register";
-import AccountButton from "./Auth/account";
+import Login from "@/components/sidebar/Auth/login";
+import Register from "@/components/sidebar/Auth/register";
+import AccountButton from "@/components/sidebar/Auth/account";
 
 export default function Sidebar() {
     const [workspaces_data, setWorkspacesData] = React.useState<Workspace_list["workspaces"]>([]);

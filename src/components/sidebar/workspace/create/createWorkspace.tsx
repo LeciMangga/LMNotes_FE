@@ -1,6 +1,4 @@
 import React from "react";
-import logo from '../../assets/plus.svg';
-import Image from "next/image"
 import { Plus } from "lucide-react";
 
 
