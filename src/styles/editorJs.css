@@ -1,0 +1,209 @@
+   /* =====================================
+      NOTION-STYLE DARK/LIGHT MODE — DYNAMIC VERSION
+      Uses CSS variables from globals.css for theme adaptability.
+      Enhanced for header text inheritance.
+   ===================================== */
+
+   #editorjs {
+     color: var(--foreground) !important;
+     background: var(--background) !important;
+     font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial !important;
+   }
+
+   /* ===== BLOCK WRAPPER ===== */
+   .ce-block {
+     margin-top: 6px;
+     margin-bottom: 6px;
+   }
+
+   .ce-block__content {
+     padding: 6px 8px;
+     border-radius: 8px;
+     transition: background 0.15s ease;
+     background: transparent !important;
+   }
+
+   .ce-block__content:hover {
+     background: rgba(255, 255, 255, 0.06) !important;
+   }
+
+   /* ===== PARAGRAPH ===== */
+   .ce-paragraph {
+     color: var(--foreground) !important;
+     line-height: 1.6 !important;
+     font-size: 15px !important;
+   }
+
+   .ce-paragraph[data-placeholder]:empty::before {
+     color: rgba(255, 255, 255, 0.4) !important;
+   }
+
+   /* =====================================
+      HEADERS — MATCH NOTION SIZES, NOW WITH FORCED TEXT INHERITANCE
+      Targets h1-h6 directly and ensures nested text inherits.
+   ===================================== */
+   .ce-header {
+     font-weight: 600 !important;
+     margin: 6px 0 !important;
+     line-height: 1.3 !important;
+     color: var(--foreground) !important;
+     /* Ensure all child text inherits */
+     * {
+       font-weight: inherit !important;
+       font-size: inherit !important;
+       color: inherit !important;
+     }
+   }
+
+   /* Specific level styles — added !important to font-size for max specificity */
+   .ce-header[data-level="1"] {
+     font-size: 2rem !important;
+   }
+
+   .ce-header[data-level="2"] {
+     font-size: 1.5rem !important;
+   }
+
+   .ce-header[data-level="3"] {
+     font-size: 1.25rem !important;
+   }
+
+   .ce-header[data-level="4"] {
+     font-size: 1.125rem !important;
+   }
+
+   .ce-header[data-level="5"] {
+     font-size: 1rem !important;
+   }
+
+   .ce-header[data-level="6"] {
+     font-size: 0.875rem !important;
+   }
+
+   /* Fallback for headers without data-level */
+   .ce-header:not([data-level]) {
+     font-size: 1.25rem !important;
+   }
+
+   /* Additional: Target h1-h6 elements directly in case of nesting issues */
+   #editorjs h1.ce-header {
+     font-size: 2rem !important;
+     font-weight: 600 !important;
+   }
+
+   #editorjs h2.ce-header {
+     font-size: 1.5rem !important;
+     font-weight: 600 !important;
+   }
+
+   #editorjs h3.ce-header {
+     font-size: 1.25rem !important;
+     font-weight: 600 !important;
+   }
+
+   #editorjs h4.ce-header {
+     font-size: 1.125rem !important;
+     font-weight: 600 !important;
+   }
+
+   #editorjs h5.ce-header {
+     font-size: 1rem !important;
+     font-weight: 600 !important;
+   }
+
+   #editorjs h6.ce-header {
+     font-size: 0.875rem !important;
+     font-weight: 600 !important;
+   }
+
+   /* =====================================
+      INLINE TOOLBAR
+   ===================================== */
+   .ce-inline-toolbar {
+     background: var(--background) !important;
+     border: 1px solid rgba(255, 255, 255, 0.2) !important;
+     border-radius: 8px !important;
+     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45) !important;
+   }
+
+   .ce-inline-toolbar__buttons button:hover {
+     background: rgba(255, 255, 255, 0.1) !important;
+   }
+
+   /* =====================================
+      BLOCK SETTINGS MENU (⋮⋮)
+   ===================================== */
+   .ce-settings {
+     background: var(--background) !important;
+     border-radius: 8px !important;
+     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45) !important;
+   }
+
+   .ce-settings__item:hover {
+     background: rgba(255, 255, 255, 0.1) !important;
+   }
+
+   /* Add (+) and Drag (⋮⋮) Buttons */
+   .ce-toolbar__plus,
+   .ce-toolbar__settings-btn {
+     background: rgba(255, 255, 255, 0.1) !important;
+     color: var(--foreground) !important;
+     border-radius: 6px !important;
+   }
+
+   .ce-toolbar__plus:hover,
+   .ce-toolbar__settings-btn:hover {
+     background: rgba(255, 255, 255, 0.2) !important;
+   }
+
+   /* =====================================
+      CHECKLIST
+   ===================================== */
+   .ce-list__item {
+     color: var(--foreground) !important;
+   }
+
+   .ce-list--checklist .ce-list__item::before {
+     border-color: rgba(255, 255, 255, 0.4) !important;
+   }
+
+   .ce-list--checklist .ce-list__item--checked::before {
+     background: #4f46e5 !important;
+     border-color: #4f46e5 !important;
+     box-shadow: inset 0 0 0 3px var(--background) !important;
+   }
+
+   /* =====================================
+      QUOTE
+   ===================================== */
+   .cdx-quote {
+     border-left: 3px solid rgba(255, 255, 255, 0.3) !important;
+     padding-left: 12px !important;
+     color: var(--foreground) !important;
+     font-style: italic !important;
+   }
+
+   /* =====================================
+      TABLE
+   ===================================== */
+   .cdx-table table {
+     color: var(--foreground) !important;
+   }
+
+   .cdx-table td {
+     border: 1px solid rgba(255, 255, 255, 0.2) !important;
+     padding: 6px !important;
+   }
+
+   .cdx-table tr:nth-child(even) {
+     background: rgba(255, 255, 255, 0.05) !important;
+   }
+
+   /* =====================================
+      IMAGE
+   ===================================== */
+   .cdx-image img {
+     border-radius: 6px !important;
+     box-shadow: 0 4px 22px rgba(0, 0, 0, 0.45) !important;
+   }
+   

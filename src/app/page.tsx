@@ -1,8 +1,6 @@
 import Image from "next/image";
 import logo from './logo.svg';
 import './App.css';
-import Header from '../components/header/header';
-import Sidebar from '../components/sidebar/sidebar';
 
 export default function Home() {
   const socialLinks = [
